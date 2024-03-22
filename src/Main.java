@@ -3,7 +3,6 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    private static final double RADIUS_EARTH = 6371.0;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите координаты первой точки(градусы):");
@@ -27,6 +26,7 @@ public class Main {
         return Math.toRadians(degrees);
     }
     private static double getResult(double shir1, double dol1, double shir2, double dol2){
+        final double RADIUS_EARTH = 6371;
         double shirota1 = degreesToRadians(shir1);
         double dolgota1 = degreesToRadians(dol1);
         double shirota2 = degreesToRadians(shir2);
